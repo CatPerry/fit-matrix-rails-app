@@ -27,14 +27,17 @@
               <input type="radio" name=<%="q#{quiz.id}"%> value=3> <%= quiz.option_3 %>
             </label>
           </li>
+          <% unless quiz.option_4 != nil %>
           <li>
             <label class="radio-inline">
               <input type="radio" name=<%="q#{quiz.id}"%> value=4 > <%= quiz.option_4 %>
             </label>
           </li>
+          <% else %>
           <li>
-              <input name=<%="question#{quiz.id}"%> type="hidden" value=<%=quiz.id%>
-          </li>  
+              <input name=<%="quiz#{quiz.id}"%> type="hidden" value=<%=quiz.id%>
+          </li>
+          <%end%>  
           <% if $quizzes.last.id == quiz.id %>
             <button>Submit </button> 
           <%else%>
@@ -72,8 +75,8 @@
     <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 2 %>
       <main>
         <ul>
-          <li><h2><strong>Name: <%= exercise['exercise']['name']%></strong></h2></li>
-          <li><h2>Description: <%= exercise['exercise']['description']%></h2></li>
+          <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+          <li><h2><%= exercise['exercise']['description']%></h2></li>
           <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
           <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
           <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>

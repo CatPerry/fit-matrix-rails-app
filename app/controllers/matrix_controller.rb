@@ -9,6 +9,7 @@ class MatrixController < ApplicationController
     @data = JSON.parse(@file)
 
     $quizzes = Quiz.all
+        
   end
 
   def index   
@@ -42,6 +43,9 @@ class MatrixController < ApplicationController
     # @matrixchoices = []
     # @correct = []
   
+      # if (params["q#{id}".to_sym] == "upper")
+    #   $quizzes.each do |quiz|
+
     # # $matrixchoices.each do |exercise| 
 		#  @data['exercises'].each do | exercise|	
 		# 	id = exercise['exercise']['pk']
