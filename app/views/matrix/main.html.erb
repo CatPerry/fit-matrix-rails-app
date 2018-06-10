@@ -1,0 +1,178 @@
+
+<%= javascript_include_tag 'matrixmain'%> 
+<body>
+
+<%# THREE QUIZZES %>
+
+<%# Upper Lower Abs or Full Body %>
+<main>
+<form id="formupperlowerabsquiz" action="/matrix/results" method="get" >
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <% $quizzes.each do |quiz|%>
+    <div class="mainquestion">
+      <h2> <%= quiz.description %></h2>
+        <ul>
+          <li>  
+            <label class="radio-inline">
+              <input type="radio" checked="checked" name=<%="q#{quiz.id}"%> value=1 >  <%= quiz.option_1 %>
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name=<%="q#{quiz.id}"%> value=2 > <%= quiz.option_2 %>
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name=<%="q#{quiz.id}"%> value=3> <%= quiz.option_3 %>
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name=<%="q#{quiz.id}"%> value=4 > <%= quiz.option_4 %>
+            </label>
+          </li>
+          <li>
+              <input name=<%="question#{quiz.id}"%> type="hidden" value=<%=quiz.id%>
+          </li>  
+          <% if $quizzes.last.id == quiz.id %>
+            <button>Submit </button> 
+          <%else%>
+            <button  onclick="carousel(); return false;"> Next </button>
+          <% end %>            
+        </ul>
+      </div>
+      <% end %>
+    </form>
+
+
+  <script>
+    var slideIndex = 0;
+
+    function carousel() {
+      let x = document.getElementsByClassName("mainquestion");
+      for (let i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {
+        slideIndex = 1
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+    carousel();
+  </script>     
+</section>
+
+</main>
+
+  <div> 
+    
+    <% @data['exercises'].each do | exercise|%>
+    <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 2 %>
+      <main>
+        <ul>
+          <li><h2><strong>Name: <%= exercise['exercise']['name']%></strong></h2></li>
+          <li><h2>Description: <%= exercise['exercise']['description']%></h2></li>
+          <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+          <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+          <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+          <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+          <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+        </ul>
+      </main>
+    <% end %>
+    <% end %>
+    
+  </div>
+
+</body>
+
+
+
+  <%# $matrixchoices.each do |exercise|%>
+    <%# <div role="radiogroup" id="upperlowerabsquiz" labelledby="upperlowerabsquiz" class="mainexercise">
+      <h2>   What body part do you want to work: Upper, Lower, Abs, or Full?</h2>
+        <ul>
+          <li>  
+            <label class="radio-inline" for="upper">
+              <input type="radio" name="upperlowerabs" checked="false" value="upper" id="upper">Upper Body  
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline" for="lower">
+              <input type="radio" name="upperlowerabs" checked="false" value="lower" id="lower" >Lower Body 
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline" for="abs">
+              <input type="radio" name="upperlowerabs" checked="false" value="abs" id="abs"> Abs
+            </label>
+          </li> 
+          <li>
+            <label class="radio-inline" for="full">
+              <input type="radio" name="upperlowerabs" checked="true" value="full" id="full"> Full Body
+            </label>
+          </li> 
+          <button  onclick="carousel(); return false;"> Next </button> 
+          <button type="submit" onclick="carousel();" id="upperlowerabs">Submit </button> 
+        </ul>
+      </div>  
+    </form>
+
+
+<%# Beginner, Intermediate, or Advanced %>
+
+<%# <form id="formbegintadvquiz" action="/matrix/main" method="get" >
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%# <div role="radiogroup" id="begintadvquiz" labelledby="begintadvquiz" class="mainexercise">
+      <h2>   Are you Beginner, Intermediate or Advanced?</h2>
+        <ul>
+          <li>  
+            <label class="radio-inline" for="beginner">
+              <input type="radio" name="begintadv" checked="false" value="beginner" id="beginner">Beginner  
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline" for="intermediate">
+              <input type="radio" name="begintadv" checked="false" value="intermediate" id="intermediate" >Intermediate 
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline" for="advanced">
+              <input type="radio" name="begintadv" checked="false" value="advanced" id="advanced"> Advanced
+            </label>
+          </li> 
+          <button  onclick="carousel(); return false;"> Next </button>
+          <button onclick="carousel();" type="submit" id="begintadv">Submit </button>
+        </ul>
+      </div>  
+    </form> %>
+
+
+<%# TYPE OF TIMER %>
+<%# <form id="formtimerquiz" action="/matrix/main" method="get" >
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %> 
+  <%# $matrixchoices.each do |exercise|%>
+    <%# <div role="radiogroup" id="timerquiz" labelledby="timerquiz" class="mainexercise">
+      <h2>   What timer style do you want today? </h2>
+        <ul>
+          <li>  
+            <label class="radio-inline" for="emom">
+              <input type="radio" name="timer" checked="false" value="emom" id="emom">Every Minute on the Minute  
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline" for="hiit">
+              <input type="radio" name="timer" checked="false" value="hiit" id="hiit" >HIIT/Tabata (High Intensity Interval Training) 
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline" for="amrap">
+              <input type="radio" name="timer" checked="false" value="amrap" id="amrap"> AMRAP (As Many Rounds As Possible)
+            </label>
+          </li>  
+          <button type="submit" onclick="allQuizAnswers();" id="timer">Submit </button>  
+        </ul>
+      </div>  
+    </form> %>

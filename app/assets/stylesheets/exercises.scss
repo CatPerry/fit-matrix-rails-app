@@ -1,0 +1,79 @@
+// Place all the styles related to the Exercises controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: url("fit-matrix-background-copy.png");
+  width: 100%;
+  height: 100%;
+}
+.nav {
+  position: absolute;
+  top: 0px;
+  height: 200px;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 100px;
+}
+.headerfont {
+  position: absolute;
+  top: 5px;
+  left: 40%;
+  z-index: 4;
+  text-shadow: black 1px 1px 1px;
+  font-size: 3.5em;
+  // font-family: 'Raleway Dots', cursive;
+  // font-family: 'Josefin Sans', sans-serif;
+  // font-family: 'Exo 2', sans-serif;
+  // font-family: 'Krona One', sans-serif;
+  // font-family: 'Righteous', cursive;
+  // font-family: 'Orbitron', sans-serif;
+  // font-family: 'Jura', sans-serif;
+  // font-family: 'Monoton', cursive;
+  font-family: 'Audiowide', cursive;
+}
+.dots {
+  font-family: 'Raleway Dots', cursive;
+  position: absolute;
+  top: 50px;
+  left: 53%;
+  z-index: 4;
+  font-size: 1.1em;
+}
+h2 {
+  font-family: 'Raleway Dots', cursive;
+}
+li {
+  list-style-type: none;
+}
+main {
+  background-color: white;
+  width: 65%;
+  box-shadow: rgb(252, 227, 5) 2px 2px 2px;
+  border-radius: 10px;
+  margin-top: 80px;
+  padding: 15px;
+  font-family: 'Raleway Dots', cursive;
+  font-weight: 300;
+  float: left;
+}
+.woimages {
+  width:100%;
+}
+
+
+//sidebar
+aside {
+  width: 200px;
+  position: absolute;
+  top: 144px;
+  right: 20px;
+  float: right;
+  background-color: white;
+  box-shadow: rgb(252, 227, 5) 2px 2px 2px;
+  border-radius: 10px;
+  margin-top: 0px;
+  padding: 15px;
+}
+.search-container {
+  width: 200px;
+}

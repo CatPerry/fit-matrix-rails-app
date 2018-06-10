@@ -6,11 +6,68 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> 
+    <%= javascript_include_tag 'auth'%> 
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Exo+2|Josefin+Sans|Jura|Krona+One|Monoton|Orbitron|Raleway+Dots|Righteous" rel="stylesheet"> 
+
   </head>
 
-  <body>
-    <h1>Hello World</h1>
+  <body> 
+  
+    <header>
+      <nav><%= image_tag "navfitmatrix-copy.png", class: "nav"%></nav>
+      <h1 class="headerfont">FIT MATRIX</h1><br>
+      <h1 class="dots">Find Your Mix, Finish Fit.</h1>
+    </header>
     <%= yield %>
+
+    <aside>
+        <div id="results"></div>
+       
+          <li><%= link_to 'Videos', root_path %></li>
+        </ul>
+      </div>
+
+      <div>    
+        <form action="#" id="vidform">
+            <p><input type="text" id="search" placeholder="Type something..." autocomplete="off" class="form-control" /></p>
+            <p><input type="submit" value="Search"></p>
+        </form>
+
+        <div class="item">
+          <h2>{{title}}</h2>
+            <iframe class="video w100" width="200" height="200" src="//www.youtube.com/embed/{{videoid}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div id="results" id="player"></div>
+        </div>
+
+      <div class="container">
+        <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>">
+            <%= value %>
+          </div>
+        <% end %>
+      </div>
+    
+
+    <div id="buttons">
+      <label> <input id="query" value='Enter a Workout Term here' type="text"/><button id="search-button" onclick="keyWordsearch()">Search</button></label>
+    </div>
+    <div id="container">
+    <h1>Search Results</h1>
+    <ul id="results"></ul>
+    </div>           
+    
+    <div id="search-container">
+    </div>
+    
+    </aside>
+    
+  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
   </body>
 </html>

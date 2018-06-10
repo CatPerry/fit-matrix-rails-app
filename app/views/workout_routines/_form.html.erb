@@ -1,0 +1,21 @@
+<%= form_with(model: workout_routine, local: true) do |form| %>
+  <% if workout_routine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(workout_routine.errors.count, "error") %> prohibited this workout_routine from being saved:</h2>
+
+      <ul>
+      <% workout_routine.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <li><%= text_field(:workout_routine, :name) %></li>
+  <li><%= text_field(:workout_routine, :exercise_id) %></li>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

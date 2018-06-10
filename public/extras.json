@@ -1,0 +1,486 @@
+{
+  "pk": 129,
+  "fields": {
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<p>Stand around 30 - 40cm away from the cable, the feet are firmly on the floor. Take the bar and lift the weight with a fast movements. Lower the weight as with the dumbbell curls slowly and controlled.</p>",
+    "equipment": [],
+    "creation_date": null,
+    "category": 8,
+    "uuid": "8c6c1544-cbf8-403c-ae12-b27b392702f8",
+    "muscles": [
+      1
+    ],
+    "license": 1,
+    "name": "Biceps curl with cable"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 138,
+  "fields": {
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [
+      13
+    ],
+    "description": "<p>Take a cable in your hands (palms parallel, point to each other), the body is straight. Bend the arms and bring the weight up with a fast movement. Without any pause bring it back down with a slow, controlled movement, but don't stretch completely your arms.</p>\n<p>Don't swing your body during the exercise, the biceps should do all the work here. The elbows are at your side and don't move.</p>",
+    "equipment": [],
+    "creation_date": "2013-05-05",
+    "category": 8,
+    "uuid": "5baf40e5-ea3c-4f8d-b60a-d294ee2de55b",
+    "muscles": [
+      1
+    ],
+    "license": 1,
+    "name": "Hammercurls on cable"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 146,
+  "fields": {
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<p>The exercise is the same as with a regular bench:</p>\n<p>Take two dumbbells and lay on a bench, make sure the feet are firmly on the ground and your back is not arched, but has good contact with the bench. The arms are stretched in front of you, about shoulder wide. Bend now the arms a bit and let them down with a half-circle movement to the side. Without changing the angle of the elbow bring them in a fluid movement back up.</p>",
+    "equipment": [
+      3
+    ],
+    "creation_date": "2013-05-05",
+    "category": 11,
+    "uuid": "acf1f2df-46c4-49a3-8e6c-2979ea4204b1",
+    "muscles": [
+      4
+    ],
+    "license": 1,
+    "name": "Fly with dumbbells, decline bench"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 150,
+  "fields": {
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<p>Take a barbell and stand with a straight body, the arms are hanging freely in front of you. Lift from this position the shoulders as high as you can, but don't bend the arms during the movement. On the highest point, make a short pause of 1 or 2 seconds before returning slowly to the initial position.</p>\n<p>When training with a higher weight, make sure that you still do the whole movement!</p>",
+    "equipment": [
+      1
+    ],
+    "creation_date": "2013-05-05",
+    "category": 13,
+    "uuid": "3721be0c-2a59-4bb9-90d3-695faaf028af",
+    "muscles": [
+      2
+    ],
+    "license": 1,
+    "name": "Shrugs, barbells"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 152,
+  "fields": {
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "",
+    "equipment": [],
+    "creation_date": "2013-05-05",
+    "category": 13,
+    "uuid": "7389be43-215b-4db8-8b69-75dc77004d74",
+    "muscles": [
+      2
+    ],
+    "license": 1,
+    "name": "Shoulder press, on machine"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 204,
+  "fields": {
+    "license_author": "tuckerm",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<p>Lat pulldowns with a wide grip on the bar.</p>",
+    "equipment": [],
+    "creation_date": "2014-01-13",
+    "category": 12,
+    "uuid": "34fc154f-cc8d-4e52-adb7-ff0dad2d0770",
+    "muscles": [
+      12
+    ],
+    "license": 1,
+    "name": "Wide-grip pulldown"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 205,
+  "fields": {
+    "license_author": "tuckerm",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<p>Sit on the preacher curl bench and perform a bicep curl with a dumbbell in one hand. Your other hand can be at rest, or beneath your curling arm's elbow.</p>",
+    "equipment": [
+      3
+    ],
+    "creation_date": "2014-01-15",
+    "category": 8,
+    "uuid": "83e079a9-b61c-413b-b055-f9cf515904f1",
+    "muscles": [
+      1
+    ],
+    "license": 1,
+    "name": "Single-arm preacher curl"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 206,
+  "fields": {
+    "license_author": "tuckerm",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<p>Use inclined bench. Hold dumbbells straight out to your sides, elbows slightly bent. Bring arms together above you, keeping angle of elbows fixed.</p>",
+    "equipment": [
+      3,
+      9
+    ],
+    "creation_date": "2014-01-15",
+    "category": 11,
+    "uuid": "7327ab51-7073-4c84-9e3f-2e83af40e96c",
+    "muscles": [
+      4
+    ],
+    "license": 1,
+    "name": "Incline dumbbell flye"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 208,
+  "fields": {
+    "license_author": "tuckerm",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<p>Hold bar with reverse (or \"overhand\") grip, palms facing the floor.</p>",
+    "equipment": [
+      2
+    ],
+    "creation_date": "2014-01-15",
+    "category": 8,
+    "uuid": "438678dc-5a62-4496-9458-341af0616626",
+    "muscles": [
+      1
+    ],
+    "license": 1,
+    "name": "Reverse bar curl"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 213,
+  "fields": {
+    "license_author": "tuckerm",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<p>Grip the pull-down bar with your hands closer than shoulder width apart, with your palms facing away from you. Lean back slightly. Pull the bar down towards your chest, keeping your elbows close to your sides as you come down. Pull your shoulders back at the end of the motion.</p>",
+    "equipment": [],
+    "creation_date": "2014-02-01",
+    "category": 12,
+    "uuid": "42b092ec-80b1-4471-90d1-e462a65ab18c",
+    "muscles": [
+      12
+    ],
+    "license": 1,
+    "name": "Close-grip lat pull down"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 215,
+  "fields": {
+    "license_author": "tuckerm",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [
+      5
+    ],
+    "description": "<p>Use the rope attachment on a high pulley. Grasp the two ends of the rope with your arms straight out in front of you. Pull your hands down towards your hips, while keeping your arms straight, then raise them back up to the starting position.</p>",
+    "equipment": [],
+    "creation_date": "2014-02-01",
+    "category": 12,
+    "uuid": "dc53ad5b-bd04-46d0-9499-28e9965f0e6d",
+    "muscles": [
+      12
+    ],
+    "license": 1,
+    "name": "Straight-arm pull down (rope attachment)"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 216,
+  "fields": {
+    "license_author": "tuckerm",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [
+      5
+    ],
+    "description": "<p>Use the straight bar attachment on a high pulley. Grasp the two ends of the bar with your palms facing downward and your arms straight out in front of you. Pull your hands down towards your hips, while keeping your arms straight, then raise them back up to the starting position.</p>",
+    "equipment": [],
+    "creation_date": "2014-02-01",
+    "category": 12,
+    "uuid": "034a4dcd-d085-43fa-a2b5-6d54b444ac20",
+    "muscles": [
+      12
+    ],
+    "license": 1,
+    "name": "Straight-arm pull down (bar attachment)"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 217,
+  "fields": {
+    "license_author": "tuckerm",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [
+      4
+    ],
+    "description": "<p>Perform a typical bench press, but hold the bar with your hands approximately shoulder-width apart and keep your elbows close to your body.</p>",
+    "equipment": [
+      1,
+      8
+    ],
+    "creation_date": "2014-02-01",
+    "category": 8,
+    "uuid": "6cc54626-d5ef-4013-9184-010ac96de20a",
+    "muscles": [
+      5
+    ],
+    "license": 1,
+    "name": "Close-grip bench press"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 233,
+  "fields": {
+    "license_author": "Manu, wikipedia",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [
+      1,
+      3
+    ],
+    "description": "<p>To execute the exercise, the lifter stands with their feet shoulder width apart and weights or resistance handles held by their side with a pronated (overhand) grip.</p>\n<p>The movement is to bring the arms up in front of the body to eye level and with only a slight bend in the elbow. This isolates the anterior deltoid muscle (front of the shoulder) and uses the anterior deltoid to lift the weight.</p>\n<p>When lifting it is important to keep the body still so the anterior deltoid is fully utilised; if the weight cannot be lifted by standing still then it is too heavy and a lower weight is needed. It is important to keep a slight bend in the elbow when lifting as keeping the elbow locked will add stress to the elbow joint and could cause injury.</p>\n<p>A neutral grip, similar to that used in the hammer curl, can also be used. With this variation the weight is again raised to eye level, but out to a 45 degree angle from the front of the body. This may be beneficial for those with shoulder injuries, particularly those related to the rotator cuff.</p>",
+    "equipment": [
+      1,
+      3
+    ],
+    "creation_date": "2014-03-24",
+    "category": 13,
+    "uuid": "a87de062-2101-4dc4-adda-328b4c722c6d",
+    "muscles": [
+      2
+    ],
+    "license": 1,
+    "name": "Front raises"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 274,
+  "fields": {
+    "license_author": "tuninx",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [
+      2,
+      4
+    ],
+    "description": "<p>Position one dumbbell over head with both hands under inner plate (heart shaped grip).</p>\n<p>With elbows over head, lower forearm behind upper arm by flexing elbows. Flex wrists at bottom to avoid hitting dumbbell on back of neck. Raise dumbbell over head by extending elbows while hyperextending wrists. Return and repeat.</p>",
+    "equipment": [
+      3
+    ],
+    "creation_date": "2014-09-26",
+    "category": 8,
+    "uuid": "3f7b893e-a089-450f-b8cc-ec3ec17d3bf3",
+    "muscles": [
+      5
+    ],
+    "license": 1,
+    "name": "Dumbbell Triceps Extension"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 275,
+  "fields": {
+    "license_author": "http://www.exrx.net/WeightExercises/Brachialis/DBC",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [
+      1
+    ],
+    "description": "<p>Sit on bench. Grasp dumbbell between feet. Place back of upper arm to inner thigh. Lean into leg to raise elbow slightly.</p>",
+    "equipment": [
+      3
+    ],
+    "creation_date": "2014-10-04",
+    "category": 8,
+    "uuid": "dfa090e4-77ae-40ed-86c0-4696fe93dcf1",
+    "muscles": [
+      13
+    ],
+    "license": 1,
+    "name": "Dumbbell Concentration Curl"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 279,
+  "fields": {
+    "license_author": "http://www.bodybuilding.com/",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<ol>\n<li>Start with a dumbbell in each hand and your palms facing your torso. Keep your back straight with a slight bend in the knees and bend forward at the waist. Your torso should be almost parallel to the floor. Make sure to keep your head up. Your upper arms should be close to your torso and parallel to the floor. Your forearms should be pointed towards the floor as you hold the weights. There should be a 90-degree angle formed between your forearm and upper arm. This is your starting position.</li>\n<li>Now, while keeping your upper arms stationary, exhale and use your triceps to lift the weights until the arm is fully extended. Focus on moving the forearm.</li>\n<li>After a brief pause at the top contraction, inhale and slowly lower the dumbbells back down to the starting position.</li>\n<li>Repeat the movement for the prescribed amount of repetitions.</li>\n</ol>\n<p><strong>Variations:</strong> This exercise can be executed also one arm at a time much like the one arm rows are performed.</p>\n<p>Also, if you like the one arm variety, you can use a low pulley handle instead of a dumbbell for better peak contraction. In this case, the palms should be facing up (supinated grip) as opposed to the torso (neutral grip).</p>",
+    "equipment": [
+      3
+    ],
+    "creation_date": "2014-10-22",
+    "category": 8,
+    "uuid": "88568115-5e88-4afc-b005-e2f7d453ac13",
+    "muscles": [
+      5
+    ],
+    "license": 1,
+    "name": "Tricep Dumbbell Kickback"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 305,
+  "fields": {
+    "license_author": "nate303303",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<p>-Perform a traditional dumbbell biceps curl, pausing at the top of the motion.</p>\n<p>-Twist your hands until your palms are facing away from your shoulders (in reverse curl position).\u00a0 Basically, twist your right wrist inwards to the left, and vice versa.</p>\n<p>-In a slow, controlled movement, lower the Dbells with your palms facing the ground.\u00a0 At the bottom of the motion, twist your wrists back into the traditional curl grip (palms facing up, towards shoulder).</p>\n<p>-That is 1 rep</p>\n<p>\u00a0</p>",
+    "equipment": [],
+    "creation_date": "2015-02-06",
+    "category": 8,
+    "uuid": "7738fb4e-8f17-4aeb-84ef-2ee3e12eaff7",
+    "muscles": [
+      1,
+      13
+    ],
+    "license": 2,
+    "name": "Z Curls"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 306,
+  "fields": {
+    "license_author": "nate303303",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<p>-(1) Perform a lateral raise, pausing at the top of the lift (2).</p>\n<p>-Instead of lowering the weight, bring it to the front of your body so that you appear to be at the top position of a front raise.\u00a0 You will do this by using a Pec Fly motion, maintaining straight arms. (3)</p>\n<p>-Now lower the weight to your quadriceps, or, in other words, lower the dumbbells as though you are completing a Front Raise repetition. (4)</p>\n<p>-Reverse the motion:\u00a0 Perform a front raise (5), at the apex of the lift use a Reverse Fly motion to position the weights at the top of a Lateral Raise (6), and finally, lower the weights until your palms are essentially touching the sides of your thighs (7).\u00a0 THIS IS ONE REP.</p>\n<p>(1) l\u00a0 <em>front view \u00a0</em>(2) -l-\u00a0<em> FV \u00a0</em>\u00a0 (3) l-\u00a0 <em>side view</em> \u00a0 (4) l\u00a0 <em>SV/FV</em> \u00a0 (5) l-\u00a0 <em>SV \u00a0</em> (6) -l- \u00a0<em>FV \u00a0</em>\u00a0 (7)\u00a0 l\u00a0 <em>FV/SV</em></p>",
+    "equipment": [
+      3
+    ],
+    "creation_date": "2015-02-06",
+    "category": 13,
+    "uuid": "aba7ba7a-6ff0-47d4-ab66-8952e21e38c5",
+    "muscles": [
+      2,
+      9
+    ],
+    "license": 2,
+    "name": "Lateral-to-Front Raises"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 311,
+  "fields": {
+    "license_author": "koreyhinton",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [
+      1
+    ],
+    "description": "<p>Feet apart at shoulder width. Nice and Slow!</p>",
+    "equipment": [
+      3
+    ],
+    "creation_date": "2015-02-11",
+    "category": 13,
+    "uuid": "97d7eba2-681f-4b14-8e78-7d9b5865d336",
+    "muscles": [
+      2,
+      9
+    ],
+    "license": 2,
+    "name": "Upright Row w/ Dumbbells"
+  },
+  "model": "exercises.exercise"
+},
+{
+  "pk": 310,
+  "fields": {
+    "license_author": "Robertcoop",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [
+      12
+    ],
+    "description": "<p>Seated trunk rotation with cable </p>",
+    "equipment": [],
+    "creation_date": "2015-02-07",
+    "category": 10,
+    "uuid": "e17db782-6e28-48ef-9324-4c01672ffc54",
+    "muscles": [
+      14
+    ],
+    "license": 2,
+    "name": "Trunk rotation with cable "
+  },
+  "model": "exercises.exercise"
+},
+
+{
+  "pk": 329,
+  "fields": {
+    "license_author": "oboema",
+    "status": "2",
+    "language": 2,
+    "muscles_secondary": [],
+    "description": "<p>You sit at the bench press device, back slightly tilted to the back. The bar should be about 20 cm in front of you. Then you push the bar and take it back again, as you would with a bench press.</p>\n<p>In this position you strain your chest muscles a lot less, which is nice if you want to train, but your chest hasn't recovered yet.</p>\n<p>Here's a link to a girl on a machine specialized for this exercise, to give a better description than my failing words above.</p>\n<p>http://www.schnell-online.de/db_imgs/products/img/t-80400.jpg</p>",
+    "equipment": [
+      8
+    ],
+    "creation_date": "2015-06-12",
+    "category": 13,
+    "uuid": "ee291ad5-2064-4d0a-b252-c715f362e035",
+    "muscles": [],
+    "license": 2,
+    "name": "Diagonal shoulder Press"
+  },
+  "model": "exercises.exercise"
+},

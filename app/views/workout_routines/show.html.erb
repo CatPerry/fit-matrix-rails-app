@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+<%= @workout_routines.each do |wo |%>
+  <ul>
+    <li><%= wo.name%></li>
+    <li><%= wo.exercise_id%></li>
+  </ul>
+<%end%>
+<%= link_to 'Edit', edit_workout_routine_path(@workout_routine) %> |
+<%= link_to 'Back', workout_routines_path %>

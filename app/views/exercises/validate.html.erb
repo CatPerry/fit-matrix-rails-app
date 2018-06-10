@@ -1,0 +1,12 @@
+<ul>
+    
+    <%@result.size.times do |index|%>
+        <li class="execisesmatrixtyle"><strong><%="Question: #{@execisesmatrix[index]}"%></strong></li>
+        <%if(@correct[index])%>
+            <li class="answerstyle"><%="#{@result[index]} is "%> <span class="correct">Correct</span></li> <br><br>
+        <%else%>
+            <li class="answerstyle"><%="#{@result[index]} is "%> <span class="incorrect">Incorrect</span></li> <br><br>
+        <%end%>
+    <%end%>
+    <li class="gradestyle"><strong><%="You're score is #{@correct.count(true).to_f*100/@correct.size}%"%></strong></li>
+</ul>

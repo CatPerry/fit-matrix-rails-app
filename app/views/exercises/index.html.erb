@@ -1,0 +1,48 @@
+<body>
+  <p id="notice"><%= notice %></p>
+    <%= @exercises.each_with_index do | exercise, index |%>
+    <%# <h1>Exercise <%=exercise.index%></h1>
+    <main>
+      <ul>
+        <li><img src="<%=exercise.image%>" class="woimages"><br></li>
+        <li><h2><strong>Name: <%= exercise.name%></strong></h2></li>
+        <li><h2>Description: <%= exercise.description%></h2></li>
+        <li><h2>Reps: <%= exercise.reps%></h2></li>
+        <li><h2>Sets: <%= exercise.sets%></h2></li>
+        <li><h2>Difficulty: <%= exercise.difficulty%></h2></li>
+        <li><h2>Body Part Worked: <%= exercise.bodypart%></h2></li>
+        <li><h2>Muscle Type: <%= exercise.muscle_type%></h2></li>
+      </ul>
+      <%= link_to 'Show', exercise %> | <%= link_to 'Edit', edit_exercise_path(exercise) %> | 
+      <%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %>
+      
+    </main>
+    <%end%>
+    <br>
+
+    <%= link_to 'Create New Exercise', new_exercise_path %>
+
+  <div>
+    <% @data['exercises'].each do | exercise|%>
+    <main>
+      <ul>
+        <li><h2><strong>Name: <%= exercise['exercise']['name']%></strong></h2></li>
+        <li><h2>Description: <%= exercise['exercise']['description']%></h2></li>
+        <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+        <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+        <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+        <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+        <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+      </ul>
+    </main>   
+    <% end %>
+  </div>
+
+
+
+  <%# {"pk": "primary key",
+"equipment": ["dumbbell", "barbell", "cable", "bodyweight", "machine", "row machine"],
+"bodypart": ["upper", "lower", "abs"]
+}, %>
+</body>
+

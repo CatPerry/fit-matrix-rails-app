@@ -1,0 +1,106 @@
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="css/workitt.css"> 
+    <script>
+        var time = 0;
+        var running = 0;
+        var rounds = document.getElementById("numRounds").value;
+        var work = document.getElementById("numWork").value;
+        var rest = document.getElementyId("numRest").value;
+
+        function startPause()
+        {
+            if(document.getElementById("numRounds").value == "" || document.getElementById("numWork").value == "" || 
+                document.getElementById("numRest").value == ""){
+                    document.getElementById("error").innerHTML = "*All fields are required.";
+                }
+            else{
+                if(running == 0){
+                    running = 1;
+                    increment();
+                    document.getElementById("startPause").innerHTML = "Pause";
+                }
+                else{
+                    running = 0;
+                    document.getElementById("startPause").innerHTML = "Resume";
+                }
+            }
+        }
+
+        function reset()
+        {
+            running = 0;
+            time = 0;
+            document.getElementById("startPause").innerHTML = "Start";
+            document.getElementById("output2").innerHTML = "00:00:00";
+        }
+
+        function increment()
+        {
+            if(running == 1){
+                setTimeout(function(){
+                    time++;
+                    var mins = Math.floor(time/10/60);
+                    var secs = Math.floor(time/10 % 60);
+                    var tenths = time % 10;
+                    var round = 1;
+                    var work = document.getElementById("numWork").value;
+                    var rest = document.getElementById("numRest").value;
+                    var total = work + rest;
+                    if(secs == work){
+                        document.getElementById("work").innerHTML = "REST";
+                    }
+                    if(secs == total){
+                        document.getElementById("work").innerHTML = "WORK";
+                    }
+
+                    if(mins < 10){
+                        mins = "0" + mins;
+                    }
+                    if(secs < 10){
+                        secs = "0" + secs;
+                    }
+                    if(tenths < 10){
+                        tenths = "0" + tenths;
+                    }
+                    document.getElementById("output2").innerHTML = round + "&nbsp;&nbsp;" + mins + ":" + secs + ":" + tenths;
+                    increment(); 
+
+                },100);
+            }
+        }
+    </script>
+</head>
+<body>
+<CENTER><div class="header">
+<h1><img src="images/workitt-header.jpg" alt=header ></h1>
+   <div class="navbar">
+        <a href="workitt.html">Home</a> |
+        <a href="profile.html">Profile</a> |
+        <a href="createworkout.html">Create&nbsp;A&nbsp;Workout</a> |
+        <a href="accessories.html">Fitness&nbsp;Accessories</a> 
+  </div>
+  <p>&nbsp;</p>
+  </div></CENTER>   
+
+  <CENTER><div class="body">
+    <div id="work">WORK</div>
+    <div id="output"><span class='left'>Round</span><span class='right'>Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/><span id="output2">0&nbsp;&nbsp;00:00:00</span></div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div>
+        Number of Rounds:&nbsp;<input type="text" id="numRounds" name="Rounds" size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Length of Work:&nbsp;<input type="text" id="numWork" name="Work" size="6">&nbsp;(seconds)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Length of Rest:&nbsp;<input type="text" id="numRest" name="Rest" size="6">&nbsp;(seconds)
+    </div>
+    <br>
+    <div id="controls">
+        <button id="startPause" onclick="startPause()">Start</button>
+        <button onclick="reset()">Reset</button><br><br>
+        <span id="error"></span>
+    </div>
+    <br>
+  </div></CENTER>
+  <p>&nbsp;</p>

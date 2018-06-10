@@ -1,0 +1,10 @@
+<h1>Exercises#search</h1>
+<p>Find me in app/views/exercises/search.html.erb</p>
+
+<main>
+  <%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</main>

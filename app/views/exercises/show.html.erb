@@ -1,0 +1,38 @@
+
+
+<div>
+<p id="notice"><%= notice %></p>
+    <% @data['exercises'].each do | exercise|%>
+    <main>
+      <ul>
+        <li><h2><strong>Name: <%= exercise['exercise']['name']%></strong></h2></li>
+        <li><h2>Description: <%= exercise['exercise']['description']%></h2></li>
+        <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+        <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+        <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+        <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+        <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+      </ul>
+    </main>   
+    <% end %>
+  </div>
+
+  <hr>
+  <%= @exercises.each do | exercise |%>
+  <main>
+    <ul>
+      <li><img src="<%=exercise.image%>"><br></li>
+      <li><h2><%= exercise.name%></h2></li>
+      <li><h2>Description: <%= exercise.description%></h2></li>
+      <li><h2>Reps: <%= exercise.reps%></h2></li>
+      <li><h2>Sets: <%= exercise.sets%></h2></li>
+      <li><h2>Difficulty: <%= exercise.difficulty%></h2></li>
+      <li><h2>Body Part Worked: <%= exercise.bodypart%></h2></li>
+      <li><h2>Muscle Type:<%= exercise.muscle_type%></h2></li>
+    </ul>
+    <%= link_to 'Edit', edit_exercise_path(exercise) %> |
+    <%= link_to 'Back', exercises_path %>
+  </main>
+  <%end%>
+  
+
