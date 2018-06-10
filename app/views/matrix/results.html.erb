@@ -1,8 +1,26 @@
 <% $quizzes.each do |quiz|%>
   <% @data['exercises'].each do | exercise|%>
   <% id = quiz.id %>
+    
+    <%# UPPER BODY BEGINNER %>
+    <% if params["q1".to_sym] == "1" && params["q1".to_sym] == "1"%>
+      <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 1 %>
+        <main>
+          <ul>
+            <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+            <li><h2><%= exercise['exercise']['description']%></h2></li>
+            <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+            <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+            <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+            <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+            <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+          </ul>
+        </main>
+      <% end %>
+    
+    
     <%# UPPER BODY INTERMEDIATE %>
-    <% if params["q#{id}".to_sym] == "upper" && %>
+    <% elsif params["q1".to_sym] == "1" && params["q1".to_sym] == "2"%>
       <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 2 %>
         <main>
           <ul>
@@ -20,7 +38,7 @@
 
 
     <%# UPPER BODY ADVANCED %>
-    <% elsif params["q#{id}".to_sym] == "upper" %>
+    <% elsif params["q1".to_sym] == "1" && params["q2".to_sym] == "3" %>
       <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 3 %>
         <main>
           <ul>
@@ -38,7 +56,7 @@
 
 
     <%# LOWER BODY INTERMEDIATE %>
-    <% elsif params["q#{id}".to_sym] == "upper" %>
+    <% elsif params["q1".to_sym] == "2" && params["q2".to_sym] == "2" %>
       <% if exercise['exercise']['bodypart'] == "lower" && exercise['exercise']['difficulty'] == 2 %>
         <main>
           <ul>
@@ -56,7 +74,7 @@
 
 
     <%# LOWER BODY ADVANCED %>
-    <% elsif params["q#{id}".to_sym] == "upper" %>
+    <% elsif params["q1".to_sym] == "2" && params["q2".to_sym] == "3" %>
       <% if exercise['exercise']['bodypart'] == "lower" && exercise['exercise']['difficulty'] == 3 %>
         <main>
           <ul>
@@ -73,9 +91,43 @@
     
 
 
-    <%# ABS %>
-    <% elsif params["q#{id}".to_sym] == "abs" %>
-      <% if exercise['exercise']['bodypart'] == "abs"%>
+    <%# ABS BEGINNER%>
+    <% elsif params["q1".to_sym] == "3" && params["q2".to_sym] == "1"%>
+      <% if exercise['exercise']['bodypart'] == "abs" && exercise['exercise']['difficulty'] == 1 %>
+        <main>
+          <ul>
+            <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+            <li><h2><%= exercise['exercise']['description']%></h2></li>
+            <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+            <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+            <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+            <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+            <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+          </ul>
+        </main>
+      <% end %>
+
+
+    <%# ABS  INTERMEDIATE%>
+    <% elsif params["q1".to_sym] == "3" && params["q2".to_sym] == "2"%>
+      <% if exercise['exercise']['bodypart'] == "abs" && exercise['exercise']['difficulty'] == 2 %>
+        <main>
+          <ul>
+            <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+            <li><h2><%= exercise['exercise']['description']%></h2></li>
+            <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+            <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+            <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+            <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+            <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+          </ul>
+        </main>
+      <% end %>
+
+
+    <%# ABS ADVANCED %>
+    <% elsif params["q1".to_sym] == "3" && params["q2".to_sym] == "3"%>
+      <% if exercise['exercise']['bodypart'] == "abs" && exercise['exercise']['difficulty'] == 2 %>
         <main>
           <ul>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
@@ -92,7 +144,7 @@
 
 
     <%# FULL BODY INTERMEDIATE %>
-    <% elsif params["q#{id}".to_sym] == "full" %>
+    <% elsif params["q1".to_sym] == "4" && params["q2".to_sym] == "2"  %>
       <% if exercise['exercise']['bodypart'] == "full" && exercise['exercise']['difficulty'] == 2 %>
         <main>
           <ul>
@@ -109,7 +161,7 @@
 
 
     <%# FULL BODY ADVANCED %>
-    <% else params["q#{id}".to_sym] == "full" %>
+    <% elsif params["q1".to_sym] == "4" && params["q2".to_sym] == "3" %>
       <% if exercise['exercise']['bodypart'] == "full" && exercise['exercise']['difficulty'] == 3 %>
         <main>
           <ul>
