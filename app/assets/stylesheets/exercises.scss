@@ -10,6 +10,12 @@ body {
   padding: 20px;
   height: 300px;
 }
+.flex-grid {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
 button {
   background-color: #ff2b2b;
   color: white;
@@ -78,6 +84,16 @@ h2 {
 li {
   list-style-type: none;
 }
+.littleboxes {
+  background-color: #ff2b2b;
+  color: white;
+  border-radius: 90px;
+  padding: 10px;
+  margin: 1px;
+  display: flex;
+  box-shadow: black 2px 2px 2px;
+  // display: inline-grid;
+}
 main {
   border-style: solid;
   border-color: black;
@@ -87,6 +103,19 @@ main {
   box-shadow: rgb(51, 50, 36) 1px 1px 1px;
   border-radius: 10px;
   margin-top: 140px;
+  padding: 5px;
+  font-family: 'Raleway Dots', cursive;
+  font-weight: 300;
+  float: left;
+}
+.mainworkout {
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+  border-width: 2px;
+  width: 65%;
+  box-shadow: rgb(51, 50, 36) 1px 1px 1px;
+  border-radius: 10px;
   padding: 5px;
   font-family: 'Raleway Dots', cursive;
   font-weight: 300;

@@ -2,65 +2,69 @@
 <body>
 
 <%# THREE QUIZZES DYNAMICALLY LOADED FROM SEEDS.rb %>
-  <main id="quizdisplay">
-    <form id="formupperlowerabsquiz" action="/matrix/results" method="get" >
-      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <% $quizzes.each do |quiz|%>
-        <div class="mainquestion">
-          <h1> <%= quiz.description %></h1>
-            <ul>
-              <li>  
-                <label class="radio-inline">
-                  <input type="radio" checked="checked" name=<%="q#{quiz.id}"%> value=1 >  <%= quiz.option_1 %>
-                </label>
-              </li>
-              <li>
-                <label class="radio-inline">
-                  <input type="radio" name=<%="q#{quiz.id}"%> value=2 > <%= quiz.option_2 %>
-                </label>
-              </li>
-              <li>
-                <label class="radio-inline">
-                  <input type="radio" name=<%="q#{quiz.id}"%> value=3> <%= quiz.option_3 %>
-                </label>
-              </li>
-              <% if quiz.option_4 != nil %>
-              <li>
-                <label class="radio-inline">
-                  <input type="radio" name=<%="q#{quiz.id}"%> value=4 > <%= quiz.option_4 %>
-                </label>
-              </li>
-              <% else %>
-              <li>
-                  <input name=<%="quiz#{quiz.id}"%> type="hidden" value=<%=quiz.id%>
-              </li>
-              <%end%>  
-              <% if $quizzes.last.id == quiz.id %>
-                <button>Submit </button> 
-              <%else%>
-                <button  onclick="carousel(); return false;"> Next </button>
-              <% end %>            
-            </ul>
-          </div>
-          <% end %>
-        </form>
+<div class="flex-grid">
+  <div class="col">
+    <main id="quizdisplay">
+      <form id="formupperlowerabsquiz" action="/matrix/results" method="get" >
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <% $quizzes.each do |quiz|%>
+          <div class="mainquestion">
+            <h1> <%= quiz.description %></h1>
+              <ul>
+                <li>  
+                  <label class="radio-inline">
+                    <input type="radio" checked="checked" name=<%="q#{quiz.id}"%> value=1 >  <%= quiz.option_1 %>
+                  </label>
+                </li>
+                <li>
+                  <label class="radio-inline">
+                    <input type="radio" name=<%="q#{quiz.id}"%> value=2 > <%= quiz.option_2 %>
+                  </label>
+                </li>
+                <li>
+                  <label class="radio-inline">
+                    <input type="radio" name=<%="q#{quiz.id}"%> value=3> <%= quiz.option_3 %>
+                  </label>
+                </li>
+                <% if quiz.option_4 != nil %>
+                <li>
+                  <label class="radio-inline">
+                    <input type="radio" name=<%="q#{quiz.id}"%> value=4 > <%= quiz.option_4 %>
+                  </label>
+                </li>
+                <% else %>
+                <li>
+                    <input name=<%="quiz#{quiz.id}"%> type="hidden" value=<%=quiz.id%>
+                </li>
+                <%end%>  
+                <% if $quizzes.last.id == quiz.id %>
+                  <button>Submit </button> 
+                <%else%>
+                  <button  onclick="carousel(); return false;"> Next </button>
+                <% end %>            
+              </ul>
+            </div>
+            <% end %>
+          </form>
 
-    <%# JAVASCRIPT CAROUSEL %>
-    <script>
-      var slideIndex = 0;
+      <%# JAVASCRIPT CAROUSEL %>
+      <script>
+        var slideIndex = 0;
 
-      function carousel() {
-        let x = document.getElementsByClassName("mainquestion");
-        for (let i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
+        function carousel() {
+          let x = document.getElementsByClassName("mainquestion");
+          for (let i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > x.length) {
+            slideIndex = 1
+          }
+          x[slideIndex-1].style.display = "block";
         }
-        slideIndex++;
-        if (slideIndex > x.length) {
-          slideIndex = 1
-        }
-        x[slideIndex-1].style.display = "block";
-      }
-      carousel();
-    </script>   
-  </main>
+        carousel();
+      </script>   
+    </main>
+  </div>
+  </div>
 </body>

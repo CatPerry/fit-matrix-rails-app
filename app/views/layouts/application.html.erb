@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> 
     <%= javascript_include_tag 'auth'%> 
+    <%= favicon_link_tag "favicon-jumprope.png" %>
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Exo+2|Josefin+Sans|Jura|Krona+One|Monoton|Orbitron|Raleway+Dots|Righteous" rel="stylesheet"> 
 
   </head>
@@ -15,18 +16,21 @@
   <body> 
   
     <header>
-      <nav><%= image_tag "navfitmatrixred-copy.png", class: "nav"%></nav>
-      <h1 class="headerfont">FIT MATRIX</h1><br>
-      <h1 class="dots">Find Your Mix, Finish Fit.</h1>
+      <%=link_to matrix_main_path, class: "" do %>
+        <nav><%= image_tag "navfitmatrixred-copy.png", class: "nav"%></nav>
+        <h1 class="headerfont">FIT MATRIX</h1><br>
+        <h1 class="dots">Find Your Mix, Finish Fit.</h1>
+      <%end%>
     </header>
-    <%= yield %>
 
+    
+        <%= yield %>
+     
+
+<div class="flex-grid">
+  <div class="col">
     <aside>
         <div id="results"></div>
-       
-          <li><%= link_to 'Videos', root_path %></li>
-        </ul>
-      </div>
 
       <div>    
         <form action="#" id="vidform">
@@ -63,6 +67,8 @@
     </div>
     
     </aside>
+    </div>
+    </div>
     
   
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

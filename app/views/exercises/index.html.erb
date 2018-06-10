@@ -22,27 +22,5 @@
 
     <%= link_to 'Create New Exercise', new_exercise_path %>
 
-  <div>
-    <% @data['exercises'].each do | exercise|%>
-    <main>
-      <ul>
-        <li><h2><strong>Name: <%= exercise['exercise']['name']%></strong></h2></li>
-        <li><h2>Description: <%= exercise['exercise']['description']%></h2></li>
-        <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
-        <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
-        <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
-        <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
-        <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
-      </ul>
-    </main>   
-    <% end %>
-  </div>
-
-
-
-  <%# {"pk": "primary key",
-"equipment": ["dumbbell", "barbell", "cable", "bodyweight", "machine", "row machine"],
-"bodypart": ["upper", "lower", "abs"]
-}, %>
 </body>
 

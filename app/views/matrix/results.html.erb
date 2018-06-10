@@ -1,20 +1,33 @@
 <% $quizzes.each do |quiz|%>
-  <% @data['exercises'].each do | exercise|%>
+  <% @data['exercises'].sort_by {|hash| hash["muscle_type"].to_i} %>
+  <% @data['exercises'].reverse.each do | exercise|%>
   <% id = quiz.id %>
     
     <%# UPPER BODY BEGINNER %>
     <% if params["q1".to_sym] == "1" && params["q1".to_sym] == "1"%>
       <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 1 %>
-        <main>
-          <ul>
-            <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
-            <li><h2><%= exercise['exercise']['description']%></h2></li>
-            <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
-            <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
-            <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
-            <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
-            <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
-          </ul>
+        <%# top boxes %>
+        
+          <div class="littleboxes">
+            <div class="col">
+              <ul>
+                <li><%= exercise['exercise']['name']%></li>
+              </ul>
+            </div>
+          </div>
+        
+        <%# exercises %>
+        <main class="mainworkout">
+            <ul>
+              <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+              <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+              <li><h2><%= exercise['exercise']['description']%></h2></li>
+              <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+              <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+              <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+              <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+              <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+            </ul>
         </main>
       <% end %>
     
@@ -24,6 +37,7 @@
       <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 2 %>
         <main>
           <ul>
+            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -42,6 +56,7 @@
       <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 3 %>
         <main>
           <ul>
+            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -60,6 +75,7 @@
       <% if exercise['exercise']['bodypart'] == "lower" && exercise['exercise']['difficulty'] == 2 %>
         <main>
           <ul>
+            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -75,9 +91,10 @@
 
     <%# LOWER BODY ADVANCED %>
     <% elsif params["q1".to_sym] == "2" && params["q2".to_sym] == "3" %>
-      <% if exercise['exercise']['bodypart'] == "lower" && exercise['exercise']['difficulty'] == 3 %>
+      <% if exercise['exercise']['bodypart'] == "lower" && (exercise['exercise']['difficulty'] == 3 || exercise['exercise']['difficulty'] == 2) %>
         <main>
           <ul>
+            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -96,6 +113,7 @@
       <% if exercise['exercise']['bodypart'] == "abs" && exercise['exercise']['difficulty'] == 1 %>
         <main>
           <ul>
+            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -113,6 +131,7 @@
       <% if exercise['exercise']['bodypart'] == "abs" && exercise['exercise']['difficulty'] == 2 %>
         <main>
           <ul>
+            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -130,6 +149,7 @@
       <% if exercise['exercise']['bodypart'] == "abs" && exercise['exercise']['difficulty'] == 2 %>
         <main>
           <ul>
+            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -148,6 +168,7 @@
       <% if exercise['exercise']['bodypart'] == "full" && exercise['exercise']['difficulty'] == 2 %>
         <main>
           <ul>
+            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -162,9 +183,10 @@
 
     <%# FULL BODY ADVANCED %>
     <% elsif params["q1".to_sym] == "4" && params["q2".to_sym] == "3" %>
-      <% if exercise['exercise']['bodypart'] == "full" && exercise['exercise']['difficulty'] == 3 %>
+      <% if exercise['exercise']['bodypart'] == "full" && (exercise['exercise']['difficulty'] == 3 || exercise['exercise']['difficulty'] == 2 || exercise['exercise']['difficulty'] == 1) %>
         <main>
           <ul>
+            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
