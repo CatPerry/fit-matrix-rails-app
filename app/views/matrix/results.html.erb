@@ -1,10 +1,128 @@
-<h1>Matrix#results</h1>
-
-<ul>
+<% $quizzes.each do |quiz|%>
+  <% @data['exercises'].each do | exercise|%>
+  <% id = quiz.id %>
+    <%# UPPER BODY INTERMEDIATE %>
+    <% if params["q#{id}".to_sym] == "upper" && %>
+      <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 2 %>
+        <main>
+          <ul>
+            <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+            <li><h2><%= exercise['exercise']['description']%></h2></li>
+            <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+            <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+            <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+            <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+            <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+          </ul>
+        </main>
+      <% end %>
     
-    <%@result.size.times do |index|%>
-        <li class="execisematrixstyle"><strong><%="Question: #{@execisesmatrix[index]}"%></strong></li>
-        
-    <%end%>
-    <li class="gradestyle"><strong><%="You're score is #{@correct.count(true).to_f*100/@correct.size}%"%></strong></li>
-</ul>
+
+
+    <%# UPPER BODY ADVANCED %>
+    <% elsif params["q#{id}".to_sym] == "upper" %>
+      <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 3 %>
+        <main>
+          <ul>
+            <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+            <li><h2><%= exercise['exercise']['description']%></h2></li>
+            <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+            <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+            <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+            <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+            <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+          </ul>
+        </main>
+      <% end %>
+    
+
+
+    <%# LOWER BODY INTERMEDIATE %>
+    <% elsif params["q#{id}".to_sym] == "upper" %>
+      <% if exercise['exercise']['bodypart'] == "lower" && exercise['exercise']['difficulty'] == 2 %>
+        <main>
+          <ul>
+            <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+            <li><h2><%= exercise['exercise']['description']%></h2></li>
+            <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+            <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+            <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+            <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+            <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+          </ul>
+        </main>
+      <% end %>
+    
+
+
+    <%# LOWER BODY ADVANCED %>
+    <% elsif params["q#{id}".to_sym] == "upper" %>
+      <% if exercise['exercise']['bodypart'] == "lower" && exercise['exercise']['difficulty'] == 3 %>
+        <main>
+          <ul>
+            <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+            <li><h2><%= exercise['exercise']['description']%></h2></li>
+            <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+            <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+            <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+            <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+            <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+          </ul>
+        </main>
+      <% end %>
+    
+
+
+    <%# ABS %>
+    <% elsif params["q#{id}".to_sym] == "abs" %>
+      <% if exercise['exercise']['bodypart'] == "abs"%>
+        <main>
+          <ul>
+            <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+            <li><h2><%= exercise['exercise']['description']%></h2></li>
+            <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+            <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+            <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+            <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+            <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+          </ul>
+        </main>
+      <% end %>
+  
+
+
+    <%# FULL BODY INTERMEDIATE %>
+    <% elsif params["q#{id}".to_sym] == "full" %>
+      <% if exercise['exercise']['bodypart'] == "full" && exercise['exercise']['difficulty'] == 2 %>
+        <main>
+          <ul>
+            <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+            <li><h2><%= exercise['exercise']['description']%></h2></li>
+            <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+            <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+            <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+            <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+            <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+          </ul>
+        </main>
+      <% end %>
+
+
+    <%# FULL BODY ADVANCED %>
+    <% else params["q#{id}".to_sym] == "full" %>
+      <% if exercise['exercise']['bodypart'] == "full" && exercise['exercise']['difficulty'] == 3 %>
+        <main>
+          <ul>
+            <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
+            <li><h2><%= exercise['exercise']['description']%></h2></li>
+            <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
+            <li><h2>Sets: <%= exercise['exercise']['sets']%></h2></li>
+            <li><h2>Difficulty: <%= exercise['exercise']['difficulty']%></h2></li>
+            <li><h2>Body Part Worked: <%= exercise['exercise']['bodypart']%></h2></li>
+            <li><h2>Muscle Type: <%= exercise['exercise']['muscle_type']%></h2></li>
+          </ul>
+        </main>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

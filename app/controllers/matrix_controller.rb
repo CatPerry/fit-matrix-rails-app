@@ -31,9 +31,14 @@ class MatrixController < ApplicationController
     @result = []
     @matrixChoices = []
 
+    
+
     $quizzes.each do |quiz|
       @data['exercises'].each do | exercise|
-    id = quiz.id
+      id = quiz.id
+      
+      # if (params["q#{id}".to_sym] == "upper")
+      # @result.push()["option_#{params["q#{id}".to_sym]}"])
 
       end
     end
