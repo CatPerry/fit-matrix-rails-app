@@ -1,2 +1,10 @@
 <h1>Matrix#results</h1>
-<p>Find me in app/views/matrix/results.html.erb</p>
+
+<ul>
+    
+    <%@result.size.times do |index|%>
+        <li class="execisematrixstyle"><strong><%="Question: #{@execisesmatrix[index]}"%></strong></li>
+        
+    <%end%>
+    <li class="gradestyle"><strong><%="You're score is #{@correct.count(true).to_f*100/@correct.size}%"%></strong></li>
+</ul>

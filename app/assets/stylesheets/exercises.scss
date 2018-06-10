@@ -6,6 +6,11 @@ body {
   height: 100%;
   background: url("fitmatrixbackgroud-red-copy.png")
 }
+.mainquestion {
+  height: 300px;
+  width: 100%;
+  padding: 30px;
+}
 .nav {
   position: absolute;
   top: 0px;
@@ -22,7 +27,8 @@ body {
   top: 5px;
   left: 40%;
   z-index: 4;
-  text-shadow: black 1px 1px 1px;
+  color: #26F6F6;
+  text-shadow: black 3px 3px 3px;
   font-size: 3.5em;
   // font-family: 'Raleway Dots', cursive;
   // font-family: 'Josefin Sans', sans-serif;
@@ -37,10 +43,11 @@ body {
 .dots {
   font-family: 'Raleway Dots', cursive;
   position: absolute;
-  top: 50px;
-  left: 53%;
+  top: 54px;
+  left: 50%;
   z-index: 4;
-  font-size: 1.1em;
+  font-size: 1.4em;
+  text-shadow: #26F6F6 10px 10px 10px;
 }
 h2 {
   font-family: 'Exo 2', sans-serif;
@@ -79,7 +86,7 @@ aside {
   float: right;
   background-color: rgb(56, 54, 54);
   box-shadow: rgb(92, 29, 30) 2px 2px 2px;
-  color: white;
+  color: #4FB1B1;
   border-radius: 10px;
   margin-top: 20px;
   margin-left: 10px;

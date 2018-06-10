@@ -27,7 +27,7 @@
               <input type="radio" name=<%="q#{quiz.id}"%> value=3> <%= quiz.option_3 %>
             </label>
           </li>
-          <% unless quiz.option_4 != nil %>
+          <% unless quiz.option_4 = nil %>
           <li>
             <label class="radio-inline">
               <input type="radio" name=<%="q#{quiz.id}"%> value=4 > <%= quiz.option_4 %>
