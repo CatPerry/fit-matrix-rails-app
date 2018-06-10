@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   get 'exercises/show'
   get 'exercises/new'
   get 'exercises/experimental'
-  get '/', to: 'exercises#index'
+  
   get 'exercises/vidappend'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'exercises#index'
+  root 'matrix#main'
 end
