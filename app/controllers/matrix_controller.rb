@@ -7,7 +7,6 @@ class MatrixController < ApplicationController
     @exercises = Exercise.all
     @file = File.read('config/exercise.json')
     @data = JSON.parse(@file)
-
     $quizzes = Quiz.all
         
   end
@@ -30,7 +29,8 @@ class MatrixController < ApplicationController
     # @exercise = @exercises['exercise'] 
     @result = []
     @matrixChoices = []
-
+    $quizzes = Quiz.all
+    
     $quizzes.each do |quiz|
       @data['exercises'].each do | exercise|
       id = quiz.id

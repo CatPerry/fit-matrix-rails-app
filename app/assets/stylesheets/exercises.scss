@@ -86,13 +86,18 @@ li {
 }
 .littleboxes {
   background-color: #ff2b2b;
+  width: 120px;
   color: white;
   border-radius: 90px;
-  padding: 10px;
-  margin: 1px;
-  display: flex;
+  padding: 5px;
+  margin: 4px;
+  display: inline-flex;
   box-shadow: black 2px 2px 2px;
-  // display: inline-grid;
+  position: initial;
+  top: 90px;
+  left: 7px;
+  text-align: center;
+  word-break: break-all;
 }
 main {
   border-style: solid;
@@ -129,7 +134,7 @@ aside {
   width: 200px;
   position: fixed;
   top: 180px;
-  right: 20px;
+  right: 10px;
   float: right;
   background-color: rgb(56, 54, 54);
   box-shadow: rgb(92, 29, 30) 2px 2px 2px;
