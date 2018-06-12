@@ -6,42 +6,6 @@ body {
   height: 100%;
   // background: url("fitmatrixbackgroud-seafoam-copy-v3.png");
 }
-#quizdisplay {
-  padding: 20px;
-  height: 300px;
-  width: 400px;
-  z-index: 10;
-  position: absolute;
-  top: 275px;
-  left: 0px;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.6); 
-  /* For IE 5.5 - 7*/
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-  /* For IE 8*/
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-  color: white;
-  transition: 1s;
-}
-.flex-grid {
-  display: flex;
-}
-.col {
-  flex: 1;
-}
-button {
-  background-color: #ff2b2b;
-  color: white;
-  border-radius: 30px;
-  padding: 15px;
-  margin: 5px;
-}
-button:hover {
-  background-color: #26F6F6;
-  box-shadow: black 2px 2px 2px;
-  transition: 1s;
-  color: black;
-}
 .nav {
   position: absolute;
   top: 0px;
@@ -96,8 +60,69 @@ h2 {
   font-size: 2em;
   line-height: 1.1em;
 }
+h3 {
+  font-family: 'Audiowide', cursive;
+  font-variant: small-caps;
+  font-size: 3em;
+  line-height: 0.7em;
+  color: black;
+  margin-top: 5px;
+}
 li {
   list-style-type: none;
+}
+#quizdisplay {
+  padding: 20px;
+  height: 300px;
+  width: 400px;
+  z-index: 10;
+  position: absolute;
+  top: 275px;
+  left: 0px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.6); 
+  /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  color: white;
+}
+.stopwatch {
+  float: left;
+  margin-top: 85px;
+  border-radius: 10px;
+  border-color: black 2px;
+  padding: 20px;
+  height: 350px;
+  z-index: 10;
+  width: 50%;
+  background: rgb(0, 0, 0);
+  background: rgba(118, 247, 247, 0.89);
+  /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  color: black;
+  font-size: 1.4em;
+}
+.flex-grid {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+button {
+  background-color: #ff2b2b;
+  color: white;
+  border-radius: 30px;
+  padding: 15px;
+  margin: 5px;
+}
+button:hover {
+  background-color: #26F6F6;
+  box-shadow: black 2px 2px 2px;
+  transition: 1s;
+  color: black;
 }
 .littleboxes {
   background-color: #ff2b2b;
@@ -123,8 +148,7 @@ main {
   padding: 5px;
   font-family: 'Raleway Dots', cursive;
   font-weight: 300;
-  float: left;
-  
+  float: left; 
 }
 .mainworkout {
   background: rgba(250, 13, 13, 0.274);
@@ -149,7 +173,21 @@ main {
   position: absolute;
   top: 0px;
   left: 0px;
+  animation: fadeIn forwards 0.5s;
 }
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  10% {opacity: 0.10;}
+  15% {opacity: 0.15;}
+  25% {opacity: 0.25;}
+  35% {opacity: 0.35;}
+  50% {opacity: 0.5;}
+  60% {opacity: 0.6;}
+  75% {opacity: 0.75;}
+  85% {opacity: 0.85;}
+  100% {opacity: 1;}
+}
+.stopwatch
 .woimages {
   width:100%;
 }

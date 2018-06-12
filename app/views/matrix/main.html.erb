@@ -1,8 +1,15 @@
 <%= javascript_include_tag 'matrixmain'%> 
-<body onload="imagesCarousel()">
+<body >
+
+<header>
+  <%=link_to matrix_main_path, class: "" do %>
+    <h1 class="headerfont">FIT MATRIX</h1><br>
+    <h1 class="dots">Find Your Mix, Finish Fit.</h1>
+  <%end%>
+</header>
 
 <div class="backgroundimgcarousel">
-  <%= image_tag "acrobatics-action-action-energy-999309.jpg", class: "mainimg" %>
+  <%= image_tag "balance-beach-exercise-317157.jpg", class: "mainimg" %>
   <%= image_tag "active-adult-athlete-348487.jpg", class: "mainimg" %>
   <%= image_tag "athletes-endurance-energy-685534.jpg", class: "mainimg" %>
   <%= image_tag "challenge-clouds-crossfit-622297.jpg", class: "mainimg" %>

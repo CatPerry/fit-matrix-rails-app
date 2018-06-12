@@ -16,15 +16,7 @@
 
   <body> 
   
-    <header>
-      <%=link_to matrix_main_path, class: "" do %>
-        <nav><%= image_tag "navfitmatrixred-v2-copy.png", class: "nav"%></nav>
-        <h1 class="headerfont">FIT MATRIX</h1><br>
-        <h1 class="dots">Find Your Mix, Finish Fit.</h1>
-      <%end%>
-    </header>
-
-    
+        
         <%= yield %>
      
         <div class="container">
@@ -35,21 +27,7 @@
         <% end %>
       </div>
 
-      <div class="flex-grid">
-        <div class="col">
-          <aside>
-            
-            <div id="container">
-              <h1>Demo Corner: Watch exercises to get started!</h1>
-                <div id="buttons">
-                  <label> <input id="query" value="How to..." placeholder='Enter move name' type="text"/><button id="search-button" onclick="keyWordsearch()">Search</button></label>
-                </div>
-              <ul id="results"></ul>
-            </div>                       
-          
-          </aside>
-        </div>
-      </div>
+  
    
     </div>
   

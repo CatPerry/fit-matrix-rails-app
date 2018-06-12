@@ -17,7 +17,7 @@ function makeRequest(){
       q: q,
       part: 'snippet',
       type: "video",
-      maxResults: 2,
+      maxResults: 3,
       order: "viewCount",
       publishedAfter: "2015-01-01T00:00:00Z"
 });
@@ -26,13 +26,12 @@ function makeRequest(){
             var srchItems = response.result.items;
             $.each(srchItems, function(i, item){
             
-            for (var i = 0; i < response.items.length; i++) {
               var videoid = "http://www.youtube.com/embed/"+item.id.videoId;
               console.log("Latest ID: '" + videoid + "'");
               var video = " '" +item.snippet.title + "'<br><li><iframe width='200' height='200' src='" + videoid + "' frameborder='0' allowfullscreen></iframe></li>";
 
-              $('#results').html(video);   
-            }           
+              $('#results').append(video);   
+                     
             });  
     });
   resetVideoHeight();  

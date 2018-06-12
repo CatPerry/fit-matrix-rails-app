@@ -1,19 +1,68 @@
+<%= javascript_include_tag 'matrixmain'%> 
+
+<%# HEADER/NAV BAR%>
+<header>
+  <%=link_to matrix_main_path, class: "" do %>
+    <%= image_tag "navfitmatrixred-v2-copy.png", class: "nav"%>
+    <h1 class="headerfont">FIT MATRIX</h1><br>
+    <h1 class="dots">Find Your Mix, Finish Fit.</h1>
+  <%end%>
+</header>
+
+
+
+<%# WORKOUT TIMER%>
+<div align="center">
+  <div class="stopwatch">
+    <h3>Workout Timer</h3>
+    <div id="work">WORK</div>
+    <div id="output"><p><span>Round</span><br>
+    <span id="outputRound">1</span></p>
+    <span>Time</span><br/><span id="output2">00:00:00</span></div>
+    
+    <div>
+        Number of Rounds:&nbsp;<input type="text" id="numRounds" name="Rounds" size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Length of Work:&nbsp;<input type="text" id="numWork" name="Work" size="6">&nbsp;(seconds)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Length of Rest:&nbsp;<input type="text" id="numRest" name="Rest" size="6">&nbsp;(seconds)
+    </div>
+    <br>
+    <div id="controls">
+        <button id="startPause" onclick="startPause()">Start</button>
+        <button onclick="reset()">Reset</button><br><br>
+        <span id="error"></span>
+    </div>
+
+    </div>
+
+    <%# YOUTUBE SIDEBAR%>
+    <aside>
+          <h1>Demo Corner: Watch exercises to get started!</h1>
+            <div id="buttons">
+              <label> <input id="query" value="How to..." placeholder='Enter move name' type="text"/><button id="search-button" onclick="keyWordsearch()">Search</button></label>
+            </div>
+          <ul id="results"></ul>
+                        
+      
+    </aside>
+  </div>
+</div>
+</div>
+
+
+
+
+<%# WORKOUT RESULTS for each scenario%>
   <% @data['exercises'].sort_by {|hash| hash["muscle_type"].to_i} %>
   <% @data['exercises'].reverse.each do | exercise|%>
-    
-    <%# UPPER BODY BEGINNER %>
+
+   <%# UPPER BODY BEGINNER %>
     <% if params["q1".to_sym] == "1" && params["q2".to_sym] == "1"%>
       <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 1 %>
-       
-      <%# top boxes %>
-        <div class="littleboxes">
-          <%= exercise['exercise']['name']%>    
-        </div>
-
+  
       <%# exercises %>
         <main class="mainworkout">
             <ul>
-              <li><h2><%#= image_tag(image_url("exercise['exercise']['image']")) %> </h2></li>
+              <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
               <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
               <li><h2><%= exercise['exercise']['description']%></h2></li>
               <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -31,7 +80,7 @@
       <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 2 %>
         <main class="mainworkout">
           <ul>
-            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+            <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -50,7 +99,7 @@
       <% if exercise['exercise']['bodypart'] == "upper" && exercise['exercise']['difficulty'] == 3 %>
         <main class="mainworkout">
           <ul>
-            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+            <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -68,7 +117,7 @@
       <% if exercise['exercise']['bodypart'] == "lower" && (exercise['exercise']['difficulty'] == 2 || exercise['exercise']['difficulty'] == 1)%>
         <main class="mainworkout">
           <ul>
-            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+            <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -87,7 +136,7 @@
       <% if exercise['exercise']['bodypart'] == "lower" && (exercise['exercise']['difficulty'] == 2 || exercise['exercise']['difficulty'] == 1)%>
         <main class="mainworkout">
           <ul>
-            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+            <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -106,7 +155,7 @@
       <% if exercise['exercise']['bodypart'] == "lower" && (exercise['exercise']['difficulty'] == 3 || exercise['exercise']['difficulty'] == 2) %>
         <main class="mainworkout">
           <ul>
-            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+            <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -125,7 +174,7 @@
       <% if exercise['exercise']['bodypart'] == "abs" && exercise['exercise']['difficulty'] == 1 %>
         <main class="mainworkout">
           <ul>
-            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+            <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -143,7 +192,7 @@
       <% if exercise['exercise']['bodypart'] == "abs" && exercise['exercise']['difficulty'] == 2 %>
         <main class="mainworkout">
           <ul>
-            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+            <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -161,7 +210,7 @@
       <% if exercise['exercise']['bodypart'] == "abs" && exercise['exercise']['difficulty'] == 2 %>
         <main class="mainworkout">
           <ul>
-            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+            <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -178,7 +227,7 @@
       <% if exercise['exercise']['bodypart'] == "full" && (exercise['exercise']['difficulty'] == 2 || exercise['exercise']['difficulty'] == 1)%>
         <main class="mainworkout">
           <ul>
-            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+            <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -197,7 +246,7 @@
       <% if exercise['exercise']['bodypart'] == "full" && exercise['exercise']['difficulty'] == 2 %>
         <main class="mainworkout">
           <ul>
-            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+            <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -215,7 +264,7 @@
       <% if exercise['exercise']['bodypart'] == "full" && (exercise['exercise']['difficulty'] == 3 || exercise['exercise']['difficulty'] == 2 || exercise['exercise']['difficulty'] == 1) %>
         <main class="mainworkout">
           <ul>
-            <li><h2><strong><img src="<%= exercise['exercise']['image']%>"></strong></h2></li>
+            <li><%= image_tag(exercise['exercise']['image']) unless exercise['exercise']['image'].blank?%></li>
             <li><h2><strong><%= exercise['exercise']['name']%></strong></h2></li>
             <li><h2><%= exercise['exercise']['description']%></h2></li>
             <li><h2>Reps: <%= exercise['exercise']['reps']%></h2></li>
@@ -229,3 +278,9 @@
     <% end %>
   <% end %>
 
+<script>
+window.onload = function() {
+  reset();
+}
+
+</script>

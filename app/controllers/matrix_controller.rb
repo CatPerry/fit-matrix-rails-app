@@ -7,7 +7,9 @@ class MatrixController < ApplicationController
     @exercises = Exercise.all
     @file = File.read('config/exercise.json')
     @data = JSON.parse(@file)
+
     $quizzes = Quiz.all
+
         
   end
 
@@ -24,10 +26,13 @@ class MatrixController < ApplicationController
   end
 
   def results
-   @file = File.read('config/exercise.json')
+    @file = File.read('config/exercise.json')
     @data = JSON.parse(@file)
-    # @exercise = @exercises['exercise'] 
-    @result = []
+    
+    # @image_data = JSON.parse(params[:json])['exercises']['exercise']['image']
+    # params[:exercises][:exercise][:image] = @exercises.convert_from_base64(image_data)
+    
+   @result = []
     @matrixChoices = []
     $quizzes = Quiz.all
     
