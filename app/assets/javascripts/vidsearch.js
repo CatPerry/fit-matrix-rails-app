@@ -12,15 +12,17 @@ $(function () {
       q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
       maxResults: 3,
       order: "viewCount",
-      publishedAfter: "2016-01-01T00:00:00Z"
+      publishedAfter: "2015-01-01T00:00:00Z"
     });
     // execute the request
     request.execute(function (response) {
-      let results = response.result;
+      var results = response.result;
+      $("#results").html("");
       $.each(results.items, function (index, item) {
-        $("#results").append(item.id.videoId+ " "+item.snippet.title + "<br>");
+        $.get("tpl/item.html", function (data) {
+          $("#results").append(tplawesome(data, [{ "title": item.snippet.title, "videoid": item.id.videoId }]));
         });
-        // $.get("exercises/vidappend.html.erb", function (data) {
+      });
       resetVideoHeight();
     });
   });

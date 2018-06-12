@@ -1,5 +1,13 @@
 <%= javascript_include_tag 'matrixmain'%> 
-<body>
+<body onload="imagesCarousel()">
+
+<div class="backgroundimgcarousel">
+  <%= image_tag "acrobatics-action-action-energy-999309.jpg", class: "mainimg" %>
+  <%= image_tag "active-adult-athlete-348487.jpg", class: "mainimg" %>
+  <%= image_tag "athletes-endurance-energy-685534.jpg", class: "mainimg" %>
+  <%= image_tag "challenge-clouds-crossfit-622297.jpg", class: "mainimg" %>
+</div>
+
 
 <%# THREE QUIZZES DYNAMICALLY LOADED FROM SEEDS.rb %>
 <div class="flex-grid">
@@ -32,10 +40,6 @@
                     <input type="radio" name=<%="q#{quiz.id}"%> value=4 > <%= quiz.option_4 %>
                   </label>
                 </li>
-                <% else %>
-                <li>
-                    <input name=<%="quiz#{quiz.id}"%> type="hidden" value=<%=quiz.id%>
-                </li>
                 <%end%>  
                 <% if $quizzes.last.id == quiz.id %>
                   <button>Submit </button> 
@@ -47,12 +51,13 @@
             <% end %>
           </form>
 
-      <%# JAVASCRIPT CAROUSEL %>
+      <%# JAVASCRIPT IMAGE AND QUESTIONS CAROUSEL %>
       <script>
-        var slideIndex = 0;
+        let slideIndex = 0;
 
         function carousel() {
           let x = document.getElementsByClassName("mainquestion");
+
           for (let i = 0; i < x.length; i++) {
             x[i].style.display = "none";
           }
@@ -63,7 +68,9 @@
           x[slideIndex-1].style.display = "block";
         }
         carousel();
-      </script>   
+      </script>
+
+         
     </main>
   </div>
   </div>

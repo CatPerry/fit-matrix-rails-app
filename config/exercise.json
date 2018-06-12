@@ -170,20 +170,6 @@
     ]}
 },
 {
-  "pk": 13,
-  "exercise": {
-    "name": "Negative Crunches",
-    "muscle_type": "2",
-    "description": "Sit yourself on the decline bench and fix your legs. Cross your arms over the chest and bring with a rolling movement your upper body up, go now without a pause and with a slow movement down again. Don't let your head move during the exercise.",
-    "difficulty": 2,
-    "bodypart": "abs",
-    "reps": 12,
-    "sets": 3,
-    "equipment": [
-      "bodyweight"
-    ]}
-},
-{
   "pk": 14,
   "exercise": {
     "name": "Situps",
@@ -775,10 +761,10 @@
 {
   "pk": 56,
   "exercise": {
-    "name": "Weight Stepups",
+    "name": "Weighted Stepups",
     "muscle_type": "2",
-    "description": "box step ups w/ barbell and 45's on each side",
-    "difficulty": 2,
+    "description": "Stand in front of a box that's about knee height, holding a dumbbell in each hand. Place your right foot on the the box, with heel just inside edge of box. Keeping your chest parallel to the floor, use your right glutes to step up to the box top, bringing your left knee up until your left thigh is parallel to the floor. Under control, lower back to floro. Do all reps on one side, and then switch sides.",
+    "difficulty": 1,
     "bodypart": "lower",
     "reps": 12,
     "sets": 3,
@@ -834,7 +820,7 @@
     "name": "Barbell Snatches",
     "muscle_type": "2",
     "description": "Stand with your feet at hip width and your shins against the bar. Grasp the bar at double shoulder width and, keeping your lower back flat, drive your heels into the floor to begin lifting the bar. When it's above your knees, explosively extend your hips and shrug your shoulders. Let the momentum carry the weight overhead.",
-    "difficulty": 2,
+    "difficulty": 3,
     "bodypart": "lower",
     "reps": 12,
     "sets": 3,
@@ -903,8 +889,8 @@
   "exercise": {
     "name": "Goblet Squat",
     "muscle_type": "2",
-    "description": "Grasp dumbbell with both hands at the sides of the upper plates. Hold dumbbell in front of chest, close to torso. Place feet about shoulderwide apart, keep knees slightly bent. Squat down until thighs are parallel to floor. Keep back straight, bend and move hips backward to keep knees above feet. Return, keep knees slightly flexed. Repeat. Keep bodyweight on heels and look ahead or slightly above to keep back straight.",
-    "difficulty": 2,
+    "description": "Grasp the round part of a kettlbell (holding it upside down) or the end of a dumbbell with both hands. Holding weight in close to your chest, place feet about shoulder-width apart, knees slightly bent. Keeping your back straight, push your hips backward as you lower, keeping your knees tracking over your toes. Squat until thighs are parallel to floor. Fire through your glutes and press through your heels to return to start.",
+    "difficulty": 1,
     "bodypart": "lower",
     "reps": 12,
     "sets": 3,
@@ -917,7 +903,7 @@
   "exercise": {
     "name": "Flutter Kicks",
     "muscle_type": "2",
-    "description": "-Laying on the back, lift your straightened legs from the ground at a 45 degree angle.\u00a0 -As your Left foot travels downward and nearly touches the floor, your Right foot should seek to reach a 90 degree angle, or as close to one as possible. -Bring your R foot down until it nearly touches the floor, and bring your L foot upwards.\u00a0 Maintain leg rigidity throughout the exercise.\u00a0 Your head should stay off the ground, supported by tightened upper abdominals. -(L up R down, L down R up, x2)\u00a0 ^v, v^, ^v, v^ = 1 rep -Primarily works the Rectus Abdominus, the hip flexors and the lower back. Secondarily works the Obliques.\u00a0 Emphasis placed on the lower quadrant of the abs. \u00a0",
+    "description": "Lie faceup and lift your legs above your until they're 45 degrees from the ground.\u00a0 -As your Left foot travels downward and nearly touches the floor, your Right foot should seek to reach a 90 degree angle, or as close to one as possible. -Bring your R foot down until it nearly touches the floor, and bring your L foot upwards.\u00a0 Maintain leg rigidity throughout the exercise.\u00a0 Your head should stay off the ground, supported by tightened upper abdominals. -(L up R down, L down R up, x2)\u00a0 ^v, v^, ^v, v^ = 1 rep -Primarily works the Rectus Abdominus, the hip flexors and the lower back. Secondarily works the Obliques.\u00a0 Emphasis placed on the lower quadrant of the abs. \u00a0",
     "difficulty": 2,
     "bodypart": "abs",
     "reps": 12,
@@ -1071,8 +1057,8 @@
   "exercise": {
     "name": "Overhead Squat",
     "muscle_type": "2",
-    "description": "The barbell is held overhead in a wide-arm\u00a0snatch\u00a0grip; however, it is also possible to use a closer grip if balance allows.",
-    "difficulty": 2,
+    "description": "Stand behind a barbell placed on the floor. Grasp it with an overhand grip just outside your shins.",
+    "difficulty": 3,
     "bodypart": "lower",
     "reps": 12,
     "sets": 3,
@@ -1086,8 +1072,8 @@
     "name": "Wall Handstand",
     "muscle_type": "2",
     "description": "Handstand against a wall for support (chest facing wall).",
-    "difficulty": 2,
-    "bodypart": "lower",
+    "difficulty": 3,
+    "bodypart": "upper",
     "reps": 12,
     "sets": 3,
     "equipment": [

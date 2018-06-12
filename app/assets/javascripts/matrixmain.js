@@ -1,4 +1,20 @@
-// let matrixradiogrp1Choice = document.getElementById("matrixquizchoice");
+let slideIndexImgs = 0;
+function imagesCarousel() {
+  let bkgrdimg = document.getElementsByClassName("mainimg");
+
+  for (let i = 0; i < bkgrdimg.length; i++) {
+  bkgrdimg[i].style.display = "none";
+  }
+  slideIndexImgs++;
+  if (slideIndexImgs > bkgrdimg.length) {
+  slideIndexImgs = 1
+  }
+  bkgrdimg[slideIndexImgs-1].style.display = "block";
+  setTimeout(imagesCarousel, 5000);
+  }
+imagesCarousel();
+
+// THESE DONT WORK YET. JUST EXPERIMENTAL.
 // UPPER LOWER ABS OR FULL BODY QUIZ
 function allQuizAnswers() {
   let formsAll = document.querySelectorAll("form");
