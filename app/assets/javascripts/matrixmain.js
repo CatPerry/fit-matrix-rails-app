@@ -33,7 +33,6 @@ var work = document.getElementById("numWork").value;
 var rest = document.getElementyId("numRest").value;
 
 function startPause() {
-  
   //check value
   if (document.getElementById("numRounds").value == "" || document.getElementById("numWork").value == "" ||
     document.getElementById("numRest").value == "") {
@@ -78,6 +77,11 @@ function increment() {
       if (secs == total) {
         document.getElementById("work").innerHTML = "WORK";
       }
+      //I WANT TO CHANGE THE INNER HTML OF ROUNDS TOO, but it's currently not incrementing
+      if (rounds == total) {
+        roundCounter = round++;
+        document.getElementById("outputRound").innerHTML = roundCounter;
+      }
 
       if (mins < 10) {
         mins = "0" + mins;
@@ -95,58 +99,3 @@ function increment() {
     }, 100);
   }
 }
-
-
-
-
-
-
-
-
-// THESE DONT WORK YET. JUST EXPERIMENTAL.
-// UPPER LOWER ABS OR FULL BODY QUIZ
-function allQuizAnswers() {
-  let formsAll = document.querySelectorAll("form");
-  allSelects = [];
-  let matrixquizdiv = document.querySelector(".matrixquizresults");
-
-    let form1 = document.querySelector("#formupperlowerabsquiz");
-
-    form1.addEventListener("submit", function (event) {
-      event.preventDefault();
-      let data = new FormData(form1);
-      let output1 = "";
-      for (const entry of data) {
-        output1 = entry[0] + "=" + entry[1] + "\r";
-        allSelects.push(output1)
-      };
-    }, false);
-
-    // // BEGINNER INTERMEDIATE OR ADVANCED QUIZ
-    let form2 = document.querySelector("#formbegintadvquiz");
-
-    form2.addEventListener("submit", function (event) {
-      event.preventDefault();
-      let data = new FormData(form2);
-      let output2 = "";
-      for (const entry of data) {
-        output2 = entry[0] + "=" + entry[1] + "\r";
-        allSelects.push(output2)
-      };
-    }, false);
-
-    // 
-    let form3 = document.querySelectorAll("#formtimerquiz");
-
-    form3.addEventListener("submit", function (event) {
-      event.preventDefault();
-      let data = new FormData(form3);
-      let output3 = "";
-      for (const entry of data) {
-        output3 = entry[0] + "=" + entry[1] + "\r";
-        allSelects.push(output3)
-      };
-    }, false);
-
-  matrixquizdiv.appendChild(formsAll);
-};

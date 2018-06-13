@@ -19,7 +19,8 @@ function makeRequest(){
       type: "video",
       maxResults: 3,
       order: "viewCount",
-      publishedAfter: "2015-01-01T00:00:00Z"
+      safeSearch: "strict",
+      publishedAfter: "2016-01-01T00:00:00Z"
 });
     request.execute(function(response)  {
       $('#results').empty()
